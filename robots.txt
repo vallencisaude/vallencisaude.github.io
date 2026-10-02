@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vallencisaude.com.br/salas/sitemap.xml

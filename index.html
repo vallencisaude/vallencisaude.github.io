@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Enquanto o site principal da clínica não existe, a raiz do domínio leva para /salas/,
+         mantendo os parâmetros do link (ex.: ?utm_source=instagram), que o rastreamento usa. -->
+    <script>location.replace("/salas/" + location.search + location.hash);</script>
+    <meta http-equiv="refresh" content="0; url=/salas/">
+    <link rel="canonical" href="https://vallencisaude.com.br/salas/">
+    <meta name="robots" content="noindex">
+    <title>Clínica VALLENCI — Saúde Integrada</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <style>
+        body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #2f3229; color: #f2f0ea; font: 16px/1.5 system-ui, sans-serif; text-align: center; }
+        a { color: #e7ded0; }
+    </style>
+</head>
+
+<body>
+    <p>Carregando… <a href="/salas/">Toque aqui se a página não abrir</a>.</p>
+</body>
+
+</html>
