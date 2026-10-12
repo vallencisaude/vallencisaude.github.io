@@ -704,13 +704,18 @@
                 padding: 0 0 46px max(32px, calc(50% - 590px));
             }
 
+            /* A foto (vertical) fica com no máximo 900 px de largura, presa à direita, para o rosto e
+               os produtos aparecerem inteiros em qualquer tela; a borda esquerda some no fundo. */
             .hero::after {
-                left: 38%;
-                background-position: 50% 30%;
+                left: auto;
+                width: min(62%, 900px);
+                background-position: 50% 28%;
+                -webkit-mask-image: linear-gradient(90deg, transparent, #000 32%);
+                mask-image: linear-gradient(90deg, transparent, #000 32%);
             }
 
             .hero::before {
-                background: linear-gradient(90deg, #161813 36%, rgba(22, 24, 19, .75) 50%, rgba(22, 24, 19, .05) 72%), linear-gradient(180deg, rgba(27, 30, 24, 0) 70%, var(--topo) 100%);
+                background: linear-gradient(90deg, #161813 calc(50% - 110px), rgba(22, 24, 19, .55) calc(50% + 30px), rgba(22, 24, 19, 0) calc(50% + 170px)), linear-gradient(180deg, rgba(27, 30, 24, 0) 70%, var(--topo) 100%);
             }
 
             .hero-top {
