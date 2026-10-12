@@ -297,10 +297,10 @@
         .marq {
             display: flex;
             gap: 12px;
-            margin-top: 14px;
+            margin-top: 8px;
             overflow-x: auto;
             scrollbar-width: none;
-            padding-bottom: 2px;
+            padding: 6px 0 8px;
             -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
             mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
         }
@@ -318,6 +318,18 @@
             overflow: hidden;
             border: 2px solid rgba(231, 222, 208, .18);
             background: #fff;
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+
+        /* Ao passar o mouse, o logo cresce e ganha borda dourada */
+        @media (hover: hover) {
+            .marq li:hover {
+                position: relative;
+                z-index: 1;
+                transform: scale(1.18);
+                border-color: var(--ouro);
+                box-shadow: 0 12px 26px -10px rgba(0, 0, 0, .85), 0 0 0 3px rgba(200, 184, 138, .25);
+            }
         }
 
         .marq li:first-child {
@@ -847,8 +859,13 @@
                 transition: none;
             }
 
-            .send:hover {
+            .send:hover,
+            .marq li:hover {
                 transform: none;
+            }
+
+            .marq li {
+                transition: none;
             }
         }
     </style>
