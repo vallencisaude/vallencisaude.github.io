@@ -294,19 +294,32 @@
             color: var(--oliva-claro);
         }
 
+        /* No celular, os logos passam sozinhos em faixa contínua (como no site das salas):
+           o script duplica a lista e a animação desloca exatamente uma lista + um espaço.
+           Segurar o dedo na faixa pausa. No computador, os logos ficam parados e centralizados. */
+        .marq-wrap {
+            margin-top: 8px;
+            padding: 6px 0 8px;
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+        }
+
         .marq {
             display: flex;
             gap: 12px;
-            margin-top: 8px;
-            overflow-x: auto;
-            scrollbar-width: none;
-            padding: 6px 0 8px;
-            -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-            mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+            width: max-content;
+            animation: marq 24s linear infinite;
         }
 
-        .marq::-webkit-scrollbar {
-            display: none;
+        .marq-wrap:active .marq {
+            animation-play-state: paused;
+        }
+
+        @keyframes marq {
+            to {
+                transform: translateX(calc(-50% - 6px));
+            }
         }
 
         .marq li {
@@ -330,14 +343,6 @@
                 border-color: var(--ouro);
                 box-shadow: 0 12px 26px -10px rgba(0, 0, 0, .85), 0 0 0 3px rgba(200, 184, 138, .25);
             }
-        }
-
-        .marq li:first-child {
-            margin-left: 10px;
-        }
-
-        .marq li:last-child {
-            margin-right: 10px;
         }
 
         .marq img {
@@ -803,17 +808,21 @@
                 margin-top: 34px;
             }
 
-            .marq {
-                justify-content: center;
-                flex-wrap: wrap;
+            .marq-wrap {
                 overflow: visible;
                 -webkit-mask-image: none;
                 mask-image: none;
             }
 
-            .marq li:first-child,
-            .marq li:last-child {
-                margin: 0;
+            .marq {
+                width: auto;
+                justify-content: center;
+                flex-wrap: wrap;
+                animation: none;
+            }
+
+            .marq li[aria-hidden="true"] {
+                display: none;
             }
 
             .form-wrap {
@@ -867,6 +876,22 @@
             .marq li {
                 transition: none;
             }
+
+            .marq-wrap {
+                -webkit-mask-image: none;
+                mask-image: none;
+            }
+
+            .marq {
+                width: auto;
+                justify-content: center;
+                flex-wrap: wrap;
+                animation: none;
+            }
+
+            .marq li[aria-hidden="true"] {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -904,22 +929,24 @@
                  e a de /salas/; os logos ficam em /assets/parceiros/ (quadrados, 150 × 150 px ou mais). -->
             <section class="partners" aria-labelledby="parceirosTitulo">
                 <h2 id="parceirosTitulo">Marcas que já são parceiras</h2>
-                <ul class="marq">
-                    <li><img src="/assets/parceiros/nutrify.webp" alt="Nutrify Real Foods" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/vitafor.webp" alt="Vitafor" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/momenta.webp" alt="Momenta" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/apsen.webp" alt="Apsen" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/singular-pharma.webp" alt="Singular Pharma" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/farmaformula-aracaju.webp" alt="Farmafórmula Aracaju" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/kadu-emporio-natural.webp" alt="Kadu Empório Natural" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/brumar-armazem-natural.webp" alt="Brumar Armazém Natural" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/nutrimia-express.webp" alt="Nutrimia Express" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/vitality-pure.webp" alt="Vitality Pure" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/ibs-pilates-classico.webp" alt="IBS Pilates Clássico" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/eb-assessoria-esportiva.webp" alt="EB Assessoria Esportiva" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/expandir-networking.webp" alt="Expandir Networking" width="150" height="150" loading="lazy"></li>
-                    <li><img src="/assets/parceiros/nayane-moreno-ortodontia.webp" alt="Nayane Moreno Ortodontia e Ortopedia Facial" width="150" height="150" loading="lazy"></li>
-                </ul>
+                <div class="marq-wrap">
+                    <ul class="marq">
+                        <li><img src="/assets/parceiros/nutrify.webp" alt="Nutrify Real Foods" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/vitafor.webp" alt="Vitafor" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/momenta.webp" alt="Momenta" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/apsen.webp" alt="Apsen" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/singular-pharma.webp" alt="Singular Pharma" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/farmaformula-aracaju.webp" alt="Farmafórmula Aracaju" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/kadu-emporio-natural.webp" alt="Kadu Empório Natural" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/brumar-armazem-natural.webp" alt="Brumar Armazém Natural" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/nutrimia-express.webp" alt="Nutrimia Express" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/vitality-pure.webp" alt="Vitality Pure" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/ibs-pilates-classico.webp" alt="IBS Pilates Clássico" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/eb-assessoria-esportiva.webp" alt="EB Assessoria Esportiva" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/expandir-networking.webp" alt="Expandir Networking" width="150" height="150" loading="lazy"></li>
+                        <li><img src="/assets/parceiros/nayane-moreno-ortodontia.webp" alt="Nayane Moreno Ortodontia e Ortopedia Facial" width="150" height="150" loading="lazy"></li>
+                    </ul>
+                </div>
             </section>
         </div>
 
@@ -1047,6 +1074,16 @@
         /* Formulário de parcerias: valida as 10 perguntas, abre o WhatsApp Profissionais com as
            respostas na mensagem e mostra a confirmação no lugar do formulário. */
         (function () {
+            // Faixa de parceiros: duplica os logos para a rolagem contínua no celular
+            document.querySelectorAll(".marq").forEach(function (track) {
+                [].slice.call(track.children).forEach(function (item) {
+                    var clone = item.cloneNode(true);
+                    clone.setAttribute("aria-hidden", "true");
+                    clone.querySelector("img").alt = "";
+                    track.appendChild(clone);
+                });
+            });
+
             var form = document.getElementById("parceriaForm");
             var ok = document.getElementById("parceriaOk");
             var number = form.getAttribute("data-whatsapp");
