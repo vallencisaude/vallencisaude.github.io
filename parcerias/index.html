@@ -165,12 +165,14 @@
             background: linear-gradient(180deg, rgba(18, 20, 16, .35) 0%, rgba(18, 20, 16, .1) 22%, rgba(18, 20, 16, .7) 52%, rgba(27, 30, 24, .97) 78%, var(--topo) 100%);
         }
 
+        /* Logo à esquerda e botão de voltar no canto direito */
         .hero-top {
             position: absolute;
             top: 18px;
             left: 20px;
             right: 20px;
             display: flex;
+            flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
         }
@@ -735,13 +737,11 @@
                 background: linear-gradient(90deg, #161813 calc(50% - 110px), rgba(22, 24, 19, .55) calc(50% + 30px), rgba(22, 24, 19, 0) calc(50% + 170px)), linear-gradient(180deg, rgba(27, 30, 24, 0) 70%, var(--topo) 100%);
             }
 
-            /* No computador, o botão fica na coluna do texto, ao lado do logo, fora da foto */
+            /* Logo alinhado ao texto; botão no canto direito da página, longe do rosto na foto */
             .hero-top {
                 top: 26px;
                 left: max(32px, calc(50% - 590px));
-                right: auto;
-                width: min(560px, calc(100% - 64px));
-                flex-direction: row-reverse;
+                right: 40px;
             }
 
             .back {
