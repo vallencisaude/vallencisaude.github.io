@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Política de privacidade | Clínica VALLENCI — Saúde Integrada</title>
+    <meta name="description" content="Como a Clínica VALLENCI trata os dados de quem usa as páginas de vallencisaude.com.br, conforme a LGPD.">
+    <link rel="canonical" href="https://vallencisaude.com.br/politica-de-privacidade/">
+    <meta name="theme-color" content="#1b1e18">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --topo: #1b1e18;
+            --verde: #2f3229;
+            --oliva: #83836c;
+            --oliva-escuro: #6c6c57;
+            --ouro: #c8b88a;
+            --ouro-claro: #e8dcb0;
+            --creme: #e7ded0;
+            --papel: #faf8f3;
+            --serif: "Cormorant Garamond", Georgia, serif;
+            --sans: Manrope, system-ui, -apple-system, "Segoe UI", sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: var(--sans);
+            color: #3b3e34;
+            background: var(--papel);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--ouro);
+            outline-offset: 3px;
+        }
+
+        .icon-sprite {
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .icon {
+            width: 1.15em;
+            height: 1.15em;
+            flex: none;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        header {
+            background: var(--topo);
+        }
+
+        .bar {
+            width: min(100% - 32px, 860px);
+            margin: 0 auto;
+            padding: 16px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bar img {
+            display: block;
+            width: 104px;
+            height: auto;
+        }
+
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 16px 6px 6px;
+            border-radius: 99px;
+            border: 1px solid rgba(231, 222, 208, .42);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .03em;
+            color: var(--creme);
+            text-decoration: none;
+            transition: background .2s, color .2s;
+        }
+
+        .back-icon {
+            display: grid;
+            place-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, var(--ouro-claro), var(--ouro));
+            color: var(--verde);
+        }
+
+        .back:hover {
+            background: var(--creme);
+            color: var(--verde);
+        }
+
+        main {
+            width: min(100% - 32px, 760px);
+            margin: 0 auto;
+            padding: 44px 0 56px;
+        }
+
+        .eyebrow {
+            font-size: .66rem;
+            font-weight: 800;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--oliva-escuro);
+        }
+
+        h1 {
+            margin-top: 8px;
+            font-family: var(--serif);
+            font-weight: 700;
+            font-size: 2.6rem;
+            line-height: 1;
+            color: var(--verde);
+        }
+
+        .updated {
+            margin-top: 10px;
+            font-size: .8rem;
+            color: var(--oliva-escuro);
+        }
+
+        .lead {
+            margin-top: 22px;
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        h2 {
+            margin-top: 34px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(131, 131, 108, .25);
+            font-family: var(--serif);
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 1.1;
+            color: var(--verde);
+        }
+
+        h3 {
+            margin-top: 18px;
+            font-size: .98rem;
+            font-weight: 800;
+            color: var(--verde);
+        }
+
+        p,
+        li {
+            font-size: .95rem;
+            line-height: 1.65;
+        }
+
+        h2 + p,
+        h3 + p,
+        p + p,
+        p + ul,
+        ul + p,
+        h2 + ul {
+            margin-top: 10px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li + li {
+            margin-top: 4px;
+        }
+
+        li::marker {
+            color: var(--oliva);
+        }
+
+        footer {
+            padding: 22px 16px 28px;
+            text-align: center;
+            font-size: .72rem;
+            color: rgba(231, 222, 208, .7);
+            background: var(--topo);
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19.5 12h-15M10.5 6l-6 6 6 6"/></symbol>
+    </svg>
+
+    <header>
+        <div class="bar">
+            <a href="/" aria-label="Clínica VALLENCI — página inicial"><img src="/assets/agrupador/logotipo-creme.webp" alt="" width="720" height="386"></a>
+            <a class="back" href="/"><span class="back-icon" aria-hidden="true"><svg class="icon"><use href="#i-arrow-left"/></svg></span>Voltar ao início</a>
+        </div>
+    </header>
+
+    <main>
+        <p class="eyebrow">Privacidade</p>
+        <h1>Política de privacidade</h1>
+        <p class="updated">Última atualização: 22 de outubro de 2026</p>
+
+        <p class="lead">Esta política explica quais dados as páginas da Clínica VALLENCI em vallencisaude.com.br (a página principal e a página de parcerias) tratam, para quê, com quem são compartilhados e como você pode exercer seus direitos, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, a LGPD).</p>
+
+        <h2>1. Quem é o responsável pelos seus dados</h2>
+        <p>O controlador dos dados é a <strong>A&amp;F Soluções em Saúde Ltda</strong> (Clínica VALLENCI — Saúde Integrada), CNPJ 54.047.947/0001-87, com endereço na Av. Dr. José Machado de Souza, 220 – Sala 803, Jardins, Aracaju – SE, CEP 49025-740.</p>
+        <p>Para qualquer assunto sobre privacidade, fale com a gente pelo e-mail <a href="mailto:vallencisaude@gmail.com">vallencisaude@gmail.com</a>.</p>
+
+        <h2>2. Quais dados coletamos</h2>
+        <h3>Página principal</h3>
+        <p>A página principal não tem formulário. Os botões levam para o WhatsApp da clínica, para o Google Maps e para a página de parcerias.</p>
+
+        <h3>Formulário de parcerias</h3>
+        <p>Na página de parcerias (vallencisaude.com.br/parcerias), pedimos:</p>
+        <ul>
+            <li>seu <strong>nome</strong> e seu <strong>WhatsApp com DDD</strong>;</li>
+            <li>o <strong>nome</strong>, o <strong>Instagram ou site</strong> e o <strong>segmento</strong> da empresa ou marca;</li>
+            <li>as respostas sobre a <strong>proposta de parceria</strong>: o tipo de parceria, a ideia, o que a empresa poderia oferecer, o que espera da VALLENCI e se a proposta já está pronta.</li>
+        </ul>
+        <p>O site não guarda essas respostas. Elas são colocadas na mensagem que abre no seu WhatsApp e só chegam até nós se você decidir enviar essa mensagem. A partir daí, a conversa segue pelo WhatsApp da clínica.</p>
+
+        <h3>Cookies</h3>
+        <p>Estas páginas não usam cookies de estatística nem de marketing.</p>
+
+        <h2>3. Para que usamos os dados</h2>
+        <ul>
+            <li><strong>Responder o seu contato</strong> pelo WhatsApp, para consultas, exames ou dúvidas.</li>
+            <li><strong>Avaliar propostas de parceria</strong> e conversar com você sobre elas.</li>
+        </ul>
+
+        <h2>4. Com quem compartilhamos</h2>
+        <p>Não vendemos seus dados. Eles passam apenas pelos serviços que fazem as páginas funcionar:</p>
+        <ul>
+            <li><strong>WhatsApp</strong>, quando você decide enviar a mensagem;</li>
+            <li><strong>GitHub Pages</strong>, onde as páginas ficam hospedadas, e <strong>Google Fonts</strong>, que entrega as fontes. Esses serviços recebem dados técnicos da conexão, como o endereço IP, para mostrar a página;</li>
+            <li><strong>Google Maps</strong>, se você tocar em "Como chegar".</li>
+        </ul>
+        <p>Alguns desses serviços podem armazenar dados fora do Brasil, seguindo as garantias previstas na LGPD.</p>
+
+        <h2>5. Bases legais</h2>
+        <ul>
+            <li><strong>Procedimentos preliminares a um contrato, a seu pedido</strong> (art. 7º, V): respostas do formulário de parcerias e conversas pelo WhatsApp.</li>
+            <li><strong>Legítimo interesse</strong> (art. 7º, IX): funcionamento e segurança das páginas.</li>
+        </ul>
+
+        <h2>6. Por quanto tempo guardamos</h2>
+        <p>As conversas pelo WhatsApp ficam guardadas pelo tempo necessário para o atendimento e a relação com a clínica, ou enquanto houver obrigação legal.</p>
+
+        <h2>7. Seus direitos</h2>
+        <p>Pela LGPD, você pode, a qualquer momento:</p>
+        <ul>
+            <li>confirmar se tratamos seus dados e ter acesso a eles;</li>
+            <li>corrigir dados incompletos, inexatos ou desatualizados;</li>
+            <li>pedir a anonimização, o bloqueio ou a eliminação de dados desnecessários ou tratados em desconformidade com a lei;</li>
+            <li>pedir a portabilidade dos dados;</li>
+            <li>saber com quem compartilhamos seus dados;</li>
+            <li>reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</li>
+        </ul>
+        <p>Para exercer seus direitos, escreva para <a href="mailto:vallencisaude@gmail.com">vallencisaude@gmail.com</a>.</p>
+
+        <h2>8. Segurança</h2>
+        <p>As páginas usam conexão segura (HTTPS) e não guardam as respostas do formulário. Adotamos medidas para proteger os dados que chegam até nós pelo WhatsApp.</p>
+
+        <h2>9. Mudanças nesta política</h2>
+        <p>Podemos atualizar esta política quando as páginas mudarem. A data da última atualização fica sempre no topo desta página.</p>
+    </main>
+
+    <footer>© <span id="ano">2026</span> Clínica VALLENCI. Todos os direitos reservados.</footer>
+    <script>document.getElementById("ano").textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

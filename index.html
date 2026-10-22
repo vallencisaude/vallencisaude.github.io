@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <title>Clínica VALLENCI — Saúde Integrada | Aracaju</title>
-    <meta name="description" content="Consultas e exames, salas para profissionais da saúde, localização e parcerias da Clínica VALLENCI, em frente ao Shopping Jardins, em Aracaju.">
+    <meta name="description" content="Consultas e exames de nutrição, fisioterapia, estética e massoterapia, localização e parcerias da Clínica VALLENCI, em frente ao Shopping Jardins, em Aracaju.">
     <link rel="canonical" href="https://vallencisaude.com.br/">
     <meta name="theme-color" content="#1b1e18">
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -15,7 +15,7 @@
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Clínica VALLENCI">
     <meta property="og:title" content="Clínica VALLENCI — Saúde Integrada">
-    <meta property="og:description" content="Consultas e exames, salas para profissionais da saúde e parcerias. Em frente ao Shopping Jardins, em Aracaju.">
+    <meta property="og:description" content="Nutrição, fisioterapia, estética e massoterapia em um só lugar. Em frente ao Shopping Jardins, em Aracaju.">
     <meta property="og:url" content="https://vallencisaude.com.br/">
     <meta property="og:image" content="https://vallencisaude.com.br/assets/agrupador/compartilhar.jpg">
     <meta property="og:image:width" content="1200">
@@ -31,10 +31,10 @@
         "@id": "https://vallencisaude.com.br/#clinica",
         "name": "Clínica VALLENCI — Saúde Integrada",
         "alternateName": "VALLENCI",
-        "description": "Clínica de saúde integrada em Aracaju: nutrição, fisioterapia, estética e massoterapia, além de salas para profissionais da saúde. Em frente ao Shopping Jardins.",
+        "description": "Clínica de saúde integrada em Aracaju: nutrição, fisioterapia, estética e massoterapia. Em frente ao Shopping Jardins.",
         "url": "https://vallencisaude.com.br/",
         "image": "https://vallencisaude.com.br/assets/agrupador/compartilhar.jpg",
-        "logo": "https://vallencisaude.com.br/salas/assets/marca/logo-512.png",
+        "logo": "https://vallencisaude.com.br/assets/marca/logo-512.png",
         "telephone": "+55 79 99941-3951",
         "address": {
             "@type": "PostalAddress",
@@ -303,27 +303,6 @@
         .b1 p b { color: #fff; }
         .b1 .cta { background: var(--creme); color: var(--verde); }
 
-        /* 2 · Profissionais: creme */
-        .b2 {
-            --foto: url("/assets/agrupador/salas.webp");
-            background: linear-gradient(110deg, #fbf9f4, #ece4d5);
-            border-color: rgba(131, 131, 108, .25);
-        }
-
-        .b2::after {
-            background-position: 42% 50%;
-        }
-
-        .b2::before {
-            background: linear-gradient(90deg, #f8f5ee 40%, rgba(248, 245, 238, .75) 54%, rgba(248, 245, 238, 0) 78%);
-        }
-
-        .b2 .k { color: var(--oliva-escuro); }
-        .b2 h2 { color: var(--verde); }
-        .b2 p { color: #4a4d42; }
-        .b2 p b { color: var(--verde); }
-        .b2 .cta { background: var(--verde); color: var(--creme); }
-
         /* 3 · Localização: preto e dourado */
         .b3 {
             --foto: url("/assets/agrupador/localizacao.webp");
@@ -447,6 +426,7 @@
                 font-size: .95rem;
             }
 
+            /* No computador: Consultas ocupa a linha toda; Localização e Parceria ficam lado a lado */
             .grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 22px;
@@ -461,6 +441,15 @@
 
             .bn::after {
                 width: 58%;
+            }
+
+            .b1 {
+                grid-column: 1 / -1;
+            }
+
+            .b1::after {
+                width: 42%;
+                background-position: 50% 20%;
             }
 
             .bn h2 {
@@ -505,7 +494,6 @@
         <symbol id="i-whatsapp" viewBox="0 0 24 24"><path class="fill" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></symbol>
         <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.2s-7-6.1-7-11.6a7 7 0 0 1 14 0c0 5.5-7 11.6-7 11.6z"/><circle cx="12" cy="9.6" r="2.6"/></symbol>
         <symbol id="i-pessoa" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20.5a7 7 0 0 1 14 0"/></symbol>
-        <symbol id="i-consultorio" viewBox="0 0 24 24"><path d="M6 3.5H4.5v5.5a4.5 4.5 0 0 0 9 0V3.5H12"/><path d="M9 13.5v1.8a5 5 0 0 0 10 0v-2.6"/><circle cx="19" cy="10.5" r="2.2"/></symbol>
         <symbol id="i-parceria" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.4"/><path d="M15.6 14.1A5 5 0 0 1 21 19"/></symbol>
         <symbol id="i-rota" viewBox="0 0 24 24"><path d="M3.5 11 20.5 3.5 13 20.5l-1.9-7.6z"/></symbol>
         <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></symbol>
@@ -519,7 +507,7 @@
     <main>
         <p class="intro">Como podemos te <b>ajudar hoje?</b></p>
 
-        <!-- Os 4 botões. Para trocar um destino, mude só o href. -->
+        <!-- Os botões. Para trocar um destino, mude só o href. -->
         <div class="grid">
             <!-- Pacientes: WhatsApp até o site de pacientes (/clinica) ficar pronto. -->
             <a class="bn b1" href="https://wa.me/5579999413951?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20ou%20exame%20na%20VALLENCI." target="_blank" rel="noopener noreferrer">
@@ -527,14 +515,6 @@
                 <h2>Consultas<br>e Exames</h2>
                 <p><b>Nutrição, fisioterapia, estética</b> e massoterapia em um só lugar.</p>
                 <span class="cta"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-whatsapp"/></svg>Agendar consulta</span>
-            </a>
-
-            <!-- Profissionais: site das salas. Leva junto os parâmetros do link (ex.: ?utm_source=instagram). -->
-            <a class="bn b2" href="/salas/" data-keep-params>
-                <span class="k"><svg class="icon" aria-hidden="true"><use href="#i-consultorio"/></svg>Para profissionais</span>
-                <h2>Nossas Salas<br>e Espaços</h2>
-                <p>Atenda seus pacientes por <b>hora, banco de horas ou turno</b>.</p>
-                <span class="cta">Conhecer as salas<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
             </a>
 
             <!-- Localização: Google Maps. Trocar pelo link do Perfil da Empresa no Google quando chegar. -->
@@ -563,29 +543,13 @@
 
     <footer>
         <nav aria-label="Links do rodapé">
-            <a href="/salas/politica-de-privacidade.html">Política de privacidade</a><span aria-hidden="true">|</span><a href="https://www.instagram.com/vallencisaude/" target="_blank" rel="noopener noreferrer">@vallencisaude</a>
+            <a href="/politica-de-privacidade/">Política de privacidade</a><span aria-hidden="true">|</span><a href="https://www.instagram.com/vallencisaude/" target="_blank" rel="noopener noreferrer">@vallencisaude</a>
         </nav>
         © <span id="ano">2026</span> Clínica VALLENCI. Todos os direitos reservados.
     </footer>
 
     <script>
-        // Repassa os parâmetros do link (utm_*, gclid, fbclid) para o site das salas,
-        // como a raiz do domínio já fazia, para o rastreamento saber a origem da visita.
-        (function () {
-            var params = new URLSearchParams(location.search);
-            var keep = new URLSearchParams();
-            params.forEach(function (value, key) {
-                if (/^(utm_|gclid$|fbclid$)/.test(key)) keep.append(key, value);
-            });
-            if (keep.toString()) {
-                document.querySelectorAll("[data-keep-params]").forEach(function (link) {
-                    var url = new URL(link.getAttribute("href"), location.href);
-                    keep.forEach(function (value, key) { url.searchParams.set(key, value); });
-                    link.href = url.pathname + url.search + url.hash;
-                });
-            }
-            document.getElementById("ano").textContent = new Date().getFullYear();
-        })();
+        document.getElementById("ano").textContent = new Date().getFullYear();
     </script>
 </body>
 
